@@ -1,0 +1,23 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Niranjan Rao</title>
+        <link>nrjn.github.io/posts/</link>
+        <description>Recent content in Posts on Niranjan Rao</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sun, 03 May 2020 13:45:07 +0200</lastBuildDate>
+        <atom:link href="nrjn.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[WIP]...</title>
+            <link>nrjn.github.io/posts/2020/05/wip.../</link>
+            <pubDate>Sun, 03 May 2020 13:45:07 +0200</pubDate>
+            
+            <guid>nrjn.github.io/posts/2020/05/wip.../</guid>
+            <description>Hello World!!!</description>
+            <content type="html"><![CDATA[<p>Hello World!!!</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
