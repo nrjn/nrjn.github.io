@@ -263,7 +263,18 @@
                 gap: 1rem;
             }
         }
-        
+
+        .contact-item a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+    
+        .contact-item a:hover {
+            color: var(--highlight-color);
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -272,14 +283,14 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">      </div>
+    <header class="header" style="justify-content: center;">
+        <!-- <div class="logo">      </div> -->
         <nav class="nav">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
+            <!-- <a href="#projects">Projects</a> -->
+            <!-- <a href="#education">Education</a> -->
             <a href="#contact">Contact</a>
         </nav>
     </header>
