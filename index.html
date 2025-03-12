@@ -1,162 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-	<meta name="generator" content="Hugo 0.69.2" />
-        <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="author" content="Niranjan Rao ">
-<meta name="description" content="I am an Embedded Systems Engineer, based in Berlin" />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
-<meta name="theme-color" content="#252627" />
-<link rel="canonical" href="https://nrjn.github.io/" />
-
-
-    <title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niranjan Rao - Embedded Systems Engineer</title>
+    <style>
+        :root {
+            --bg-color: #f8f5f0;
+            --text-color: #333333;
+            --accent-color: #3a7ca5;
+            --secondary-color: #f0ebe1;
+            --highlight-color: #2a5d7c;
+        }
         
-            Niranjan Rao  — Hello Friend NG Theme 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-    </title>
-
-
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
-    type="text/css">
-
-
-
-<link rel="stylesheet" href="https://nrjn.github.io/main.min.753fac8f03736f0edc9be411eb20cee875dd7bb8e73c8155fbf6a629c863f4ca.css">
-
-
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="https://nrjn.github.io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://nrjn.github.io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://nrjn.github.io/favicon-16x16.png">
-    <link rel="manifest" href="https://nrjn.github.io/site.webmanifest">
-    <link rel="mask-icon" href="https://nrjn.github.io/safari-pinned-tab.svg" color="#252627">
-    <link rel="shortcut icon" href="https://nrjn.github.io/favicon.ico">
-    <meta name="msapplication-TileColor" content="#252627">
-    <meta name="theme-color" content="#252627">
-
-
-
-<meta itemprop="name" content="Niranjan Rao">
-<meta itemprop="description" content="Nice theme for homepages and blogs">
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://nrjn.github.io/"/>
-
-<meta name="twitter:title" content="Niranjan Rao"/>
-<meta name="twitter:description" content="Nice theme for homepages and blogs"/>
-
-
-
-
-
-
-
-
-
-<link rel="alternate" type="application/rss+xml" href="https://nrjn.github.io/index.xml" title="Niranjan Rao" />
-
-
-
-
-
-    </head>
-
-    <body class="dark-theme">
-        <div class="container">
-            <header class="header">
-    <span class="header__inner">
-        <a href="https://nrjn.github.io/" style="text-decoration: none;">
-    <div class="logo">
+        body {
+            font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
         
-            <span class="logo__mark">></span>
-            <span class="logo__text">$ cd /home/</span>
-            <span class="logo__cursor" style=
-                  "
-                   
-                   ">
-            </span>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
+        }
         
-    </div>
-</a>
-
-
-        <span class="header__right">
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav a:hover {
+            color: var(--accent-color);
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+        }
+        
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .experience-item {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .experience-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--highlight-color);
+        }
+        
+        .experience-company {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skills-category {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .skills-category h3 {
+            color: var(--highlight-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .skills-list {
+            line-height: 1.8;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            color: var(--accent-color);
+        }
+        
+        .project-item {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: 3rem auto 0;
+        }
+        
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--highlight-color);
+            margin-bottom: 1rem;
+        }
+        
+        .education-item {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: 3rem auto 0;
+        }
+        
+        .education-degree {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--highlight-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-school {
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
             
-                <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://nrjn.github.io/about/">About</a></li><li><a href="https://nrjn.github.io/posts/">Posts</a></li>
-    </ul>
-</nav>
-
-                <span class="menu-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
-                </span>
+            .hero h2 {
+                font-size: 1.2rem;
+            }
             
-
-            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
-  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
-</svg>
-</span>
-        </span>
-    </span>
-</header>
-
-
-            <div class="content">
-                
-    <main aria-role="main">
-        <div>
-            <h1>Niranjan Rao</h1>
-                <p>I am an Embedded Systems Engineer, based in Berlin</p>
-                <div>
-                    &nbsp; <a href="https://twitter.com/nrjnx0" target="_blank" rel="noopener" title="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a> &nbsp;&nbsp; <a href="mailto:hi@nrjn.in" target="_blank" rel="noopener" title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a> &nbsp;&nbsp; <a href="https://github.com/nrjn" target="_blank" rel="noopener" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="https://www.linkedin.com/in/niranjan-rao" target="_blank" rel="noopener" title="Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> &nbsp;
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Niranjan Rao</div>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Niranjan Rao</h1>
+        <h2>Embedded Systems Engineer</h2>
+        <!-- <p>Enthusiastic Embedded Engineer with significant experience in building embedded devices from proof of concept to production.</p> -->
+    </section>
+    
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>I am the Head of Embedded Systems at araCreate GmbH, where I lead the development of embedded solutions. Currently, I am working on a Battery Management System for electric bikes, focusing on improving power efficiency and performance.</p>
+            <p>I am an enthusiastic Embedded Engineer with extensive experience in building embedded devices from proof-of-concept to production. I specialize in ARM Cortex-M based MCUs, wireless technologies, and real-time operating systems.</p>
+            <p>My expertise includes developing firmware for various microcontrollers, implementing communication protocols, and designing power-efficient solutions for IoT devices.</p>
+        </div>
+    </section>
+    
+    <section id="experience" class="section">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="experience-grid">
+           
+        <div class="experience-item">
+                <h3 class="experience-title">Head of Embedded Systems</h3>
+                <p class="experience-date">January 2023 - present</p>
+                <p class="experience-company">araCreate GmbH - Berlin</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                        <li>Lead the design, development, and implementation of embedded systems projects.</li>
+                        <li>Engage with clients to gather product requirements, assess technical feasibility, and translate them into technical specifications.</li>
+                        <li>Assist clients with selecting appropriate components for their projects, ensuring optimal performance and cost-effectiveness.</li>
+                        <li>Support clients from proof of concept through to production, ensuring smooth transitions and successful project completion.</li>
+                </ul>
                 </div>
-        </div>
-    </main>
+                
 
+            <div class="experience-item">
+                <h3 class="experience-title">Senior Embedded Software Engineer</h3>
+                <p class="experience-date">October 2022 - August 2023</p>
+                <p class="experience-company">Freelancing - Berlin</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>Managed the project from early proof of concept to serial production, developing firmware for a productivity tool with an RGB display and IMU sensors for side detection.</li>
+                    <li>Leveraged the ESP32-S3 MCU and LVGL library for UI design and implementation.</li>
+                </ul>
             </div>
-
             
-                <footer class="footer">
-    <div class="footer__inner">
-        <div class="footer__content">
-            <span>&copy; 2020</span>
             
-                <span><a href="https://nrjn.github.io/">Niranjan Rao</a></span>
+            <div class="experience-item">
+                <h3 class="experience-title">Embedded Software Developer</h3>
+                <p class="experience-date">April 2020 - September 2022</p>
+                <p class="experience-company">Infarm GmbH - Berlin</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>I developed embedded software for MCU-based devices that automate vertical farming operations, managing sensor data and controlling various actuators. </li>
+                    <li>Contributed to gateway application code and tools to automate farms, enable remote monitoring/control, provision and quality test farms on production lines, and assist maintenance technicians with farm upkeep.</li>
+                    <li>Participated in defining the technical strategy, implementing features, and deploying production code.</li>
+                    <li>Engineered applications to retrofit existing farms with new controllers, enhancing operational efficiency and extending the life of legacy systems.</li>
+                </ul>
+            </div>
             
-            <span> <a href="https://nrjn.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            <div class="experience-item">
+                <h3 class="experience-title">Embedded Software Engineer</h3>
+                <p class="experience-date">April 2018 - March 2020</p>
+                <p class="experience-company">Next Big Thing AG - Berlin</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>Validated innovative ideas by developing proofs of concept and progressing them to prototype and production stages.</li>
+                    <li>Worked with a range of microcontrollers and wireless sensor technologies, including BLE, NB-IoT, LTE, and LoRa.</li>
+                    <li>Implemented solutions for smart diapers for the elderly, sensors to measure concrete maturity, and devices to collect data from water and heat cost meters over 868 MHz.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 class="experience-title">Embedded Engineer</h3>
+                <p class="experience-date">September 2016 - March 2018</p>
+                <p class="experience-company">Ubirch GmbH - Berlin</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>Developed firmware for prototypes and pre-production devices based on Kinetis K82 to record temperature and humidity in industrial settings, transmitting data via cellular modules for blockchain storage. This provided a single source of truth for insurance companies and their clients.</li>
+                    <li>Developed firmware for an ovulation tracking device powered by nRF52 using mbed-OS. This device measured body core temperature overnight and transmitted data to a mobile app via BLE for processing and ovulation prediction.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 class="experience-title">Master Thesis / Working Student</h3>
+                <p class="experience-date">June 2015 - August 2016</p>
+                <p class="experience-company">KIWI.KI GmbH - Berlin</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 10px;">
+                    <li>Worked on 2.4 GHz and 868 MHz RF transceivers based on ARM Cortex-M0 and M3.</li>
+                    <li>Ported gateway modem drivers from GSM to UMTS cellular modems.</li>
+                    <li>Created hardware test environments for door sensors.</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="footer__inner">
-        <div class="footer__content">
-            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
-            <span>Powered by <a href="http://gohugo.io">Hugo</a> <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng">Theme</a></span>
+    </section>
+    
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-list">C | C++ | Python | Go</div>
+            </div>
             
+            <div class="skills-category">
+                <h3>Technologies & Tools</h3>
+                <div class="skills-list">ARM Cortex-M based MCU | GNU ARM Embedded Toolchain | BLE | LoRa | NB-IoT | LTE</div>
+            </div>
             
+            <div class="skills-category">
+                <h3>Operating Systems</h3>
+                <div class="skills-list">FreeRTOS | ZephyrRTOS | Embedded Linux</div>
+            </div>
+            
+            <div class="skills-category">
+                <h3>Languages</h3>
+                <div class="skills-list">Kannada | English | German</div>
+            </div>
         </div>
-    </div>
-</footer>
-
-            
+    </section>
+    
+    <!-- <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-item">
+            <h3 class="project-title">Door Access Control System using Cookie Concept</h3>
+            <p>Design and implement a new protocol for the active RFID transponder to communicate with the online door sensors and to open doors with offline sensors.</p>
         </div>
-
+    </section> -->
+    
+    <!-- <section id="education" class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <h3 class="education-degree">Master of Engineering, Information Technology</h3>
+            <p class="education-school">SRH University of Applied Science - Heidelberg, Germany</p>
+            <p class="education-date">2013 - 2016</p>
+        </div>
         
+        <div class="education-item">
+            <h3 class="education-degree">Bachelor of Engineering, Electronics and Communication</h3>
+            <p class="education-school">Canara Engineering College - Mangalore, India</p>
+            <p class="education-date">2008 - 2012</p>
+        </div>
+    </section> -->
+    
+    <!-- <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:hello@nrjn.in">hello@nrjn.in</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <a href="tel:+4917672642891">+49 176 726 42891</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <p>Berlin, Germany</p>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Languages</h3>
+                    <p>Kannada, English, German</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Niranjan Rao. All rights reserved.</p>
+    </footer> -->
 
-
-
-
-<script type="text/javascript" src="https://nrjn.github.io/bundle.min.4a69500057d68129e88f497d354afe68422eb56de6d15e45dbe2190858ea5a76bfcb096406f992984b241db45f47388ac57ab0376e3b32125bef7a8a6d0f06c4.js" integrity="sha512-SmlQAFfWgSnoj0l9NUr&#43;aEIutW3m0V5F2&#43;IZCFjqWna/ywlkBvmSmEskHbRfRziKxXqwN247MhJb73qKbQ8GxA=="></script>
-
-
-
-    </body>
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:hello@nrjn.in">hello@nrjn.in</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <a href="tel:+4917672642891">+49 176 726 42891</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <p>Berlin, Germany</p>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </div>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/niranjan-rao" target="_blank">niranjan-rao</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Niranjan Rao. All rights reserved.</p>
+    </footer>
+</body>
 </html>
